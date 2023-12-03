@@ -1,0 +1,58 @@
+@extends('layouts.backend.master')
+
+@section('content')
+    <div class="col-lg-12">
+        <div class="admin-dashboard-content  rounded">
+
+            <form action="{{ route('channels.admin.update', ['id' => $channel->id]) }}" method="POST"
+                enctype="multipart/form-data">
+
+                @csrf
+                @method('PUT')
+                @if (session()->has('message'))
+                    <div class="alert alert-danger">{{ session()->get('message') }}</div>
+                @endif
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <label class="text-white " for="">channel_name</label>
+                <input type="text" name="name" class="form-control " placeholder="Channel name"
+                    value="{{ $channel->name }}">
+
+
+
+                @livewire('channel-country-type-edit', [$channel])
+
+
+                <img class="d-block" src="{{ Storage::url($channel->poster) }}" alt="" width="50px"
+                    height="50px">
+                <label class="text-white mt-2" for="">channel_poster <span style="margin-left: 10px">(jpg
+                        , png ,
+                        jpeg)</span></label>
+
+                <input type="file" name="poster" class="form-control" accept="image/*" />
+
+
+
+
+
+
+
+
+
+
+                <button type="submit" class="btn btn-primary w-100 mt-3">update Channel</button>
+
+
+            </form>
+        </div>
+
+    </div>
+@endsection
