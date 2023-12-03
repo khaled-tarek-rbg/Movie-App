@@ -10,7 +10,7 @@
                 <div class="xs-media">
                     <div class="d-flex flex-column">
                         <h1 class="p-0 m-0">MYCINEMA</h1>
-                        <span>wath movies and series</span>
+                        <span>مشاهده الافلام والمسلسلات</span>
                     </div>
                 </div>
 
@@ -30,44 +30,25 @@
                         </span>
                     </li>
 
-                    {{--
-                    <li>
-                        <a href="#">
 
-                            Movie</a>
-                        <span class="angle-right"><i class="fas fa-angle-right"></i></span>
-                    </li>
-
-
-                    <li>
-                        <a href="#">
-
-                            Series</a>
-                        <span class="angle-right"><i class="fas fa-angle-right"></i></span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Anime and Cartoon</a>
-                        <span class="angle-right"><i class="fas fa-angle-right"></i></span>
-                    </li> --}}
 
                     @foreach ($types as $item)
                         <li class=" types">
-                            <a href="#">{{ $item->name }}</a>
+                            <a href="{{ route('client.type.show', ['id' => $item->id]) }}">{{ $item->name }}</a>
                             <a class="types-link" href="#">
                                 <i class="fas fa-angle-right"></i>
                             </a>
-                            <ul class="types-list">
-                                @foreach ($item->subtypes as $subitem)
-                                    <li>
-                                        <a class="text-white"
-                                            href="{{ route('client.subtype.show', ['id' => $subitem->id]) }}">{{ $subitem->name }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
+
                         </li>
                     @endforeach
 
+
+                    <li>
+                        <a href="{{ route('login') }}">
+                            تسجيل دخول </a>
+                        <span class="angle-right"><i class="fas fa-angle-right"></i>
+                        </span>
+                    </li>
 
 
                 </ul>
@@ -137,7 +118,7 @@
 
             <div class="d-flex flex-column align-items-center">
                 <h1 class="p-0 m-0">MYCINEMA</h1>
-                <span>wath movies and series</span>
+                <span>مشاهده الافلام والمسلسلات</span>
             </div>
 
 

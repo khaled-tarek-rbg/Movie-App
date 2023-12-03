@@ -2,6 +2,7 @@ let barsList = document.querySelector('.bars-list')
 barsList.style.maxHeight = "0px";
 
 let rightSideBar = document.querySelector('.right-sidebar');
+let leftSidebar = document.querySelector('.left-sidebar')
 
 
 let bars = document.querySelector('.bars')
@@ -10,6 +11,7 @@ let elipseIcon = document.querySelector('.elipsisIcon')
 elipseIcon.addEventListener('click' , ()=>{
 
     rightSideBar.classList.toggle('active');
+    leftSidebar.classList.toggle('active')
    elipseIcon.querySelector('svg').classList.contains('fa-ellipsis-h')?elipseIcon.querySelector('svg').classList.replace('fa-ellipsis-h' , 'fa-times'):elipseIcon.querySelector('svg').classList.replace('fa-times' , 'fa-ellipsis-h')
 })
 

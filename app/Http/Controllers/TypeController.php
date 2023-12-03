@@ -46,9 +46,12 @@ class TypeController extends Controller
     {
 
 
-        // $type = Type::find($id);
+        $type = Type::find($id);
+        $types = Type::all();
+        $categories = Category::all();
+        $all_movies = Movie::all();
 
-        // return view('clients.types.show' , compact('type'));
+         return view('clients.types.show' , compact('type' , 'types' , 'categories' , 'all_movies'));
 
 
 

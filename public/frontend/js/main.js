@@ -2,6 +2,7 @@ let barsList = document.querySelector('.bars-list')
 let elipseIcon = document.querySelector('.elipsisIcon')
 elipseIcon.addEventListener('click' ,()=>{
    search.classList.toggle('active')
+   leftSidebar.classList.toggle('active')
    elipseIcon.querySelector('svg').classList.contains('fa-ellipsis-h')?elipseIcon.querySelector('svg').classList.replace('fa-ellipsis-h' , 'fa-times'):elipseIcon.querySelector('svg').classList.replace('fa-times' , 'fa-ellipsis-h')
 })
 barsList.style.maxHeight = "0px";
@@ -42,6 +43,7 @@ let next = document.querySelector('.next')
 let movieSlider = document.querySelector('.movie-slider .row')
 let thumbsUp = document.querySelectorAll('.movie-icon')
 let search = document.querySelector('.right-sidebar')
+let leftSidebar = document.querySelector('.left-sidebar')
 let dropDowns = document.querySelectorAll('.drop-down');
 let categories =  document.querySelectorAll('.right-sidebar .categories')
 

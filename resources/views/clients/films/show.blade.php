@@ -25,14 +25,14 @@
             <div class="content py-4 normal-w d-none">
                 <div class="poster-container d-flex justify-content-center">
                     <div class="col-lg-5 custom-show-w ">
-                        <div class="poster overflow-hidden " style="height: 100% ; width : 100%">
+                        <div class="poster overflow-hidden ">
                             <img src="{{ Storage::url($movie->poster) }}" alt="" width="100%" height="100%">
                         </div>
                     </div>
                 </div>
 
 
-                <ul class="unstyled d-flex  py-1 ">
+                <ul class="unstyled d-flex  pt-4  ">
                     <li><a href="#">Movie app</a></li>
                     <li><a href="{{ route('client.type.show', ['id' => $movie->type->id]) }}">{{ $movie->type->name }}</a>
                     </li>
@@ -112,8 +112,8 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-7 large-w-content">
-                        <ul class="unstyled d-flex py-1">
+                    <div class="col-lg-7 large-w-content ">
+                        <ul class="unstyled d-flex py-1 ">
                             <li><a href="#">Movie app</a></li>
                             <li><a
                                     href="{{ route('client.type.show', ['id' => $movie->type->id]) }}">{{ $movie->type->name }}</a>

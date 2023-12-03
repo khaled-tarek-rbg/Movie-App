@@ -23,7 +23,7 @@
 
 
                     <div class="form-header d-flex justify-content-center align-items-center">
-                        <p class="m-0">Login to movie app</p>
+                        <p class="m-0">تسجيل الدخول</p>
 
                     </div>
                     <div class="form-body">
@@ -58,7 +58,7 @@
 
 
 
-                        <button class="btn btn-danger w-100 mt-2 " type="submit">Login</button>
+                        <button class="btn btn-danger w-100 mt-2 " type="submit">تسجيل الدخول</button>
 
 
                         <div class="col-lg-12">
@@ -70,9 +70,9 @@
                         </div>
                     </div>
 
-                    <div class="form-footer  d-flex  justify-content-between pt-4 ">
+                    <div class="form-footer  d-flex  justify-content-center pt-4 ">
                         <a href="{{ route('register') }}">create new account</a>
-                        <a href="#">continue using facebook</a>
+                        {{-- <a href="#">continue using facebook</a> --}}
                     </div>
                 </form>
             </div>

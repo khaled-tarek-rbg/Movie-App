@@ -87,6 +87,34 @@ ul {
     background-color: #22263c;
 } */
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Define the thumb style */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom right, #4d7fff 0%, #1a56ff 100%);
+    border-radius: 5px;
+  }
+
+  /* Define the track style */
+  ::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+  }
+
+  /* Define the button style */
+  ::-webkit-scrollbar-button {
+    background-color: #4d7fff;
+    border-radius: 5px;
+  }
+
+  /* Define the button style when being hovered over */
+  ::-webkit-scrollbar-button:hover {
+    background-color: #999999;
+  }
+
 .pre-nav {
     display: none;
     height: 70px;
@@ -1111,7 +1139,7 @@ top: 30px;
     -o-transition: all.3s ease;
 }
 
-.right-sidebar.active {
+.right-sidebar.active , .left-sidebar.active {
     display: block;
 }
 
@@ -1144,6 +1172,11 @@ top: 30px;
     .custom-show-w {
         width: 270px;
     }
+}
+@media (max-width: 991px) {
+.right-sidebar.active{
+    display: none;
+}
 }
 
 @media (max-width: 1250px) {
@@ -1179,15 +1212,13 @@ top: 30px;
         width: 100% !important;
     }
 
-    .left-sidebar#active {
-        display: block;
-    }
 
-    .show-center {
+
+    /* .show-center {
         width: calc(100% - 300px) !important;
         margin-left: auto !important;
         margin-right: 0 !important;
-    }
+    } */
 
     .pre-nav {
         display: block;
@@ -1196,17 +1227,14 @@ top: 30px;
     .navbar {
         display: none;
     }
-}
-
-@media (max-width: 900px) {
-    .left-sidebar#active {
-        display: none;
-    }
-
-    .show-center {
-        width: 100% !important;
+    .show-center{
+        width: 100%;
     }
 }
+
+
+
+
 
 @media (max-width: 768px) {
     .logo {
@@ -1225,6 +1253,11 @@ top: 30px;
         width: 250px;
     }
 }
+/* @media (max-width: 767px) {
+    .right-sidebar.active{
+        display: none;
+    }
+} */
 
 @media (max-width: 600px) {
     .xs-media {
@@ -1328,9 +1361,9 @@ top: 30px;
     -o-border-radius: 18px;
 }
 
-.film-center ul {
+.film-center ul  {
     margin: 5px 0 !important;
-    overflow: auto;
+    overflow: auto !important;
 }
 
 .film-center ul li {

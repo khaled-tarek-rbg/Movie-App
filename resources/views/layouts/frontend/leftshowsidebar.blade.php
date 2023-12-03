@@ -1,6 +1,6 @@
-<div class="col-lg-3 left-sidebar " id="active">
+<div class="col-lg-3 left-sidebar">
 
-    <div class="user-comment-info  h-100">
+    <div class="user-comment-info ">
 
         @foreach ($comments as $item)
             <div class="user-info-container">
@@ -110,5 +110,15 @@
     </div>
 
 
+    <div class="categories">
 
+
+        @foreach ($categories as $category)
+            <a class="text-white" href="{{ route('category.show', ['id' => $category->id]) }}">{{ $category->name }}</a>
+        @endforeach
+
+
+
+
+    </div>
 </div>

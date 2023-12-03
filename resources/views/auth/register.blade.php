@@ -24,8 +24,7 @@
 
                     <div class="form-header d-flex justify-content-center">
 
-                        Register in movie app
-
+                        انشاء حساب جديد
                     </div>
                     <div class="form-body">
                         <h1 class="text-center py-4">MOVIE APP</h1>
@@ -111,12 +110,12 @@
                         ">register</button>
                     </div>
 
-                    <div class="form-footer  d-flex  justify-content-between pt-4 ">
-                        <a href="{{ route('login') }}" style="background-color: #2D83F3;
-                        ">Log
-                            in</a>
+                    <div class="form-footer  d-flex  justify-content-center pt-4 ">
+                        <a href="{{ route('login') }}"
+                            style="background-color: #2D83F3;
+                        ">تسجيل الدخول</a>
 
-                        <a href="#">continue using facebook</a>
+                        {{-- <a href="#">continue using facebook</a> --}}
                     </div>
                 </form>
             </div>

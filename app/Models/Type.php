@@ -15,5 +15,20 @@ class Type extends Model
     {
         return $this->hasMany(SubType::class);
     }
-   
+    public function movies()
+    {
+        return $this->hasMany(Movie::class , 'type_id','id');
+    }
+    public function series()
+    {
+        return $this->hasMany(Serie::class, 'type_id','id' ) ;
+    }
+    public function cartoons()
+    {
+        return $this->hasMany(Anime::class , 'type_id','id');
+    }
+    public function tvs()
+    {
+        return $this->hasMany(TV::class , 'type_id','id');
+    }
 }

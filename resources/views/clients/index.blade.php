@@ -132,7 +132,7 @@
 
 
         <div class="movie-categories my-5">
-            <ul class="d-flex p-3 justify-content-end">
+            <ul class="d-flex p-3 ">
                 <li><a href="{{ route('client.series') }}">اخر الحلقات</a></li>
                 <li><a href="{{ route('series.new') }}">اخر المسلسلات</a></li>
                 <li><a href="{{ route('movies') }}">افلام جديدة</a></li>

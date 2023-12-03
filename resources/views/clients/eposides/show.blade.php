@@ -23,9 +23,9 @@
             style="background-image: url({{ Storage::url($eposide->season->season_poster) }}) ; background-position: center ; background-size: cover ; background-repeat: no-repeat">
             <div class="blur position-absolute "></div>
             <div class="content py-4 normal-w d-none">
-                <div class="poster-container d-flex justify-content-center">
-                    <div class="col-lg-5 custom-show-w" style="height: 400px">
-                        <div class="poster overflow-hidden" style="height: 100%">
+                <div class="poster-container d-flex justify-content-center ">
+                    <div class="col-lg-5 custom-show-w  ">
+                        <div class="poster overflow-hidden ">
                             <img src="{{ Storage::url($eposide->season->season_poster) }}" alt="" width="100%"
                                 height="100%">
                         </div>
@@ -94,9 +94,10 @@
 
             <div class="content py-4 large-w ">
                 <div class="row d-flex">
-                    <div class="col-lg-5 custom-show-w">
-                        <div class="poster overflow-hidden">
-                            <img src="{{ Storage::url($eposide->season->season_poster) }}" alt="">
+                    <div class="col-lg-5 custom-show-w" style="height: 300px">
+                        <div class="poster overflow-hidden" style="height: 100%">
+                            <img src="{{ Storage::url($eposide->season->season_poster) }}" alt="" height="100%"
+                                width="100%">
                         </div>
                     </div>
 
@@ -282,7 +283,7 @@
 
 
     </div>
-         @endif
+    @endif
 
 
 

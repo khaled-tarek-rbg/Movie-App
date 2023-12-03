@@ -25,7 +25,7 @@
             <div class="blur position-absolute "></div>
             <div class="content py-4 normal-w d-none">
                 <div class="poster-container d-flex justify-content-center">
-                    <div class="col-lg-5 custom-show-w" style="height: 400px">
+                    <div class="col-lg-5 custom-show-w" style="height: 300px">
                         <div class="poster overflow-hidden" style="height: 100%">
                             <img src="{{ Storage::url($eposide->season->season_poster) }}" alt="" width="100%"
                                 height="100%">
